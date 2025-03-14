@@ -36,27 +36,66 @@
   #latest-posts {
     background-color: white;
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: var(--border-radius);
     width: 60rem;
     margin: -6rem auto 2rem auto;
-    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.4);
-  }
-  
-  #latest-posts h2 {
+    box-shadow: var(--shadow);
     text-align: center;
-  }
-  
-  #latest-posts ul {
+}
+
+#latest-posts h2 {
+    font-size: 2.5rem;
+    color: var(--text-color-dark);
+    margin-bottom: 2rem;
+}
+
+#latest-posts ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: center;
     gap: 1rem;
-  }
-  
-  #latest-posts li {
+}
+
+#latest-posts li {
     flex: 1;
-  }
+    display: flex;
+    justify-content: center;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.post img {
+    width: 10rem;
+    height: 10rem; 
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+    border: 5px solid white; 
+    box-shadow: var(--shadow); 
+}
+
+.post__content {
+    margin-top: 1rem;
+}
+
+.post__content h3 {
+    font-size: 1.5rem;
+    color: var(--text-color-dark);
+    margin: 0.5rem 0;
+}
+
+.post__content p {
+    font-size: 1rem;
+    color: var(--text-color-dark);
+    margin: 0;
+}
   
   #about {
     text-align: center;
