@@ -1,11 +1,60 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}
     My Blog
 {% endblock title%}
 
-{% block content %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static "blog/index.css" %}">
 
-    <h1>Welcome to my blog</h1>
+{% endblock css_files %}
+
+
+{% block content %}
+    <header id="main-navigation">
+        <h1><a href="">Mostafa's Blog</a></h1>
+        <nav>
+            <a href="">All posts</a>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <header>
+           <img src="" alt="Mostafa - DevOps Engineer"/>
+           <h2>MOSTAFA'S BLOG</h2>
+        </header>
+        <p> Peace, I'm Mostafa And i love tech ,Books and Video games </p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="Mountain Hiking" />
+                        <div class ="post__content">
+                            <h3>Mountain Hiking</h3>
+                            <p>
+                                There is nothing like Mountains Views 
+                                it was an amazing experiance 
+                                that i wish i repeate it again
+                            </p>
+                        </div>
+                    </a>
+                </articlel>
+            </li>
+        </ul>
+
+    </section>
+
+    <section id="about">
+        <h2>What I Do</h2>
+        <p> Peace, I'm Mostafa And i love tech ,Books and Video games </p>
+        <p> My Goal Is to Grow As A DevOps Engineer </p>
+
+    </section>
 
 {% endblock content %}
